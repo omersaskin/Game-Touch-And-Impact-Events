@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html lang="tr">
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <title>Agile Giraffe</title>
+    </head>
+    <body>
+    <audio id="myAudio">
+      <source src="sounds/bounce.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="hidden">
+      <source src="sounds/hidden.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="crash">
+      <source src="sounds/crash.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="attack">
+      <source src="sounds/attack.mp3" type="audio/mpeg">
+    </audio>
+    <div id="oyun">
+        <div id="dog"></div>
+        <div id="top"></div>
+        <div id="engel"></div>
+        <div id="engelB"></div>
+        <div id="engelI"></div>
+        <div id="engelU"></div>
+        <!--<div id="mouse" style="width:80px;height: 80px;background-color: blue; border-radius: 50%;position: absolute; top: 220px; left: 50px;"></div>-->
+        <p style="position: absolute;" id="goster"></p> 
+        <center><input type="button" name="basla" id="basla" value=""></center>
+        <!--<input type="button" name="saldir" id="saldir" value="">-->
+        <input type="button" name="gizle" id="gizle" value="">
+        <input type="button" name="zipla" id="zipla" value=""><!--
+        <button type="button" name="sag" id="sag" value=""></button>
+        <button type="button" name="sol" id="sol" value=""></button>
+        <button type="button" name="yukari" id="yukari" value=""></button>
+        <button type="button" name="asagi" id="asagi" value=""></button>-->
+        <a href="attribution.html"><img src="img/atif.png" id="atif" style="width:50px; height: 50px; position: absolute;right: 25px;bottom: 25px;"></a>
+        <input type="button" name="sonuc" id="sonuc" value="0" style="color: #000; font-weight: bold;">
+        <center><input type="button" name="restat" id="restat" value=""></center>
+    </div>
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/game.js"></script>
+        <script src="js/admob.js"></script>
+    </body>
+</html>
